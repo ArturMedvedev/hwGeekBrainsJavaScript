@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HomeWork_task_5</title>
+</head>
+<body>
+	<script>
+		'use strict'
+		/*
+		Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+		где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+		переданного значения операции (использовать switch) выполнить одну из арифметических 
+		операций
+		(использовать функции из задания 4) и вернуть полученное значение.
+		*/
+
+		function summation(a, b) {
+			return a + b;
+		}
+
+		function subtraction(a, b) {
+			return a - b;
+		}
+
+		function multiplication(a, b) {
+			return a * b;
+		}
+
+		function division(a, b) {
+			return a / b;
+		}
+
+		function math_action(a, b, action) {
+
+			switch(action) {
+
+				case "summation":
+				alert(summation(a, b));
+				break;
+
+				case "subtraction":
+				alert(subtraction(a, b));
+				break;
+
+				case "multiplication":
+				alert(multiplication(a, b));
+				break;
+
+				case "division":
+				alert(division(a, b));
+				break;
+			}
+		}
+
+		math_action(10, 5, "summation");
+		math_action(10, 5, "subtraction");
+		math_action(10, 100, "multiplication");
+		math_action(10, 5, "division");
+
+	</script>
+	
+</body>
+</html>
