@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HomeWork_task_1</title>
+</head>
+<body>
+	<script>
+		'use strict'
+		/*
+		Написать функцию, преобразующую число в объект. Передавая на вход число в диапазоне [0, 999],
+		мы должны получить на выходе объект, в котором в соответствующих свойствах описаны разряды числа:
+		- единицы (в свойстве units)
+		- десятки (в свойстве tens)
+		- сотни (в свойстве hundereds)
+		Например, для числа 45 мы должны получить следующий объект:
+		{
+		units: 5, //это единицы
+		tens: 4,  //это десятки
+		hundreds: 0, //это сотни
+		}
+		Если число было передано вне [0, 999] диапазона, не целое число или вообще не число,
+		необходимо выдать соответствующее сообщение с помощью console.log и вернуть пустой объект.
+		*/
+
+		function ObjNumber(num) {
+			if (Number.isInteger(num)) {
+				num = String(num);
+				if (num.length == 3) {
+					this.units = parseInt(num[2]);
+					this.tens = parseInt(num[1]);
+					this.hundreds = parseInt(num[0]);
+				}
+				if (num.length == 2) {
+					this.units = parseInt(num[1]);
+					this.tens = parseInt(num[0]);
+					this.hundreds = 0;
+				}
+				if (num.length == 1) {
+					this.units = parseInt(num[0]);
+					this.tens = 0;
+					this.hundreds = 0;
+				}
+				if (num.length > 3) {
+					console.log('Потрачено')
+				}		
+			} else {
+				console.log('Потрачено')
+			}
+		};	
+
+		let num = new ObjNumber(parseInt(prompt('Введите трехзначное целое число в диапазоне [0:999]: ')));
+
+		console.log(num);
+			
+
+	</script>
+	
+</body>
+</html>
