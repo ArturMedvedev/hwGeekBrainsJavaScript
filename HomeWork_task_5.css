@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: black;
+}
+
+td[data-i="8"] {
+    text-align: center;
+}
+
+td[data-j="0"] {
+    text-align: center;
+}
